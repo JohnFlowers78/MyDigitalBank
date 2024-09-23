@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- FragmentContainerView para os fragmentos rolarem por trás do balão -->
+
+    <!-- Balão flutuante com botões -->
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/ContainerViewMain"
+        android:name="br.com.meusite.mydigitalbank.SobreContaFragment"
+        android:layout_width="407dp"
+        android:layout_height="659dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/rounded_balloon_opacity"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Botão 1 com ícone -->
+        <ImageButton
+            android:id="@+id/btnTransaction"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button_purple"
+            android:contentDescription="@string/up_down_icon"
+            android:src="@drawable/arrow_transactions"
+            app:tint="@android:color/white" />
+
+        <!-- Botão 2 com ícone -->
+        <ImageButton
+            android:id="@+id/btnMoneyBox"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button_gray"
+            android:contentDescription="@string/dollar_icon"
+            android:src="@drawable/baseline_money"
+            app:tint="@android:color/black" />
+
+        <!-- Botão 3 com ícone -->
+        <ImageButton
+            android:id="@+id/btnShop"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_button_gray"
+            android:contentDescription="@string/bag_icon"
+            android:src="@drawable/baseline_bag"
+            app:tint="@android:color/black" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
